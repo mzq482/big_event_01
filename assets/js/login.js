@@ -29,7 +29,7 @@ $(function () {
         e.preventDefault();
         $.ajax({
             type: 'POST',
-            url: '/reguser',
+            url: '/api/reguser',
             data: {
                 username: $('.reg-box input[name=username').val(),
                 password: $('.reg-box input[name=password').val()
@@ -50,7 +50,7 @@ $(function () {
         e.preventDefault();
         $.ajax({
             type: 'POST',
-            url: '/login',
+            url: '/api/login',
             data: $(this).serialize(),
             success: (res) => {
                 if (res.status !== 0) {
